@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skyline Weather</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&family=Red+Hat+Text:wght@400;500&family=Red+Hat+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>Skyline Weather</h1>
+      <div class="units" role="group" aria-label="Temperature unit">
+        <button type="button" data-unit="C" aria-pressed="true">&deg;C</button>
+        <button type="button" data-unit="F" aria-pressed="false">&deg;F</button>
+      </div>
+    </header>
+
+    <form id="search-form" class="search" novalidate>
+      <label class="sr-only" for="city">City name</label>
+      <input type="search" id="city" name="city" placeholder="Search a city, e.g. Tokyo" autocomplete="off" maxlength="60" aria-describedby="field-error">
+      <button type="submit" class="btn-primary" id="search-btn">Search</button>
+    </form>
+    <p id="field-error" class="field-error" role="alert"></p>
+
+    <div id="recent" class="recent" aria-label="Recent searches"></div>
+
+    <section id="results" aria-live="polite" aria-busy="false"></section>
+
+    <p class="credit">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>. No account or API key needed.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
