@@ -1,0 +1,4 @@
+# Plain HTML/CSS/JS site with no build step. The files live in weather-dashboard/.
+[build]
+  publish = "weather-dashboard"
+  command = "echo 'No build step required'"
